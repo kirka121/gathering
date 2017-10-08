@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem 'rails', '~> 5.1.0'
 gem 'pg'
 gem 'puma', '~> 3.7'
@@ -22,7 +17,6 @@ gem 'react_on_rails', '8.0.0'
 gem 'gsdk', '>= 1.0.0.4'
 gem 'devise', github: 'plataformatec/devise'
 gem 'erubis'
-gem 'alpr_ruby'
 gem 'aws-sdk-rails'
 
 group :development, :test do
@@ -39,8 +33,6 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'mini_racer', platforms: :ruby
-
 gem 'mini_racer', platforms: :ruby
 gem 'webpacker_lite'
