@@ -10,10 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728144320) do
+ActiveRecord::Schema.define(version: 20171008133954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "authentication_tokens", force: :cascade do |t|
+    t.string "body"
+    t.bigint "user_id"
+    t.datetime "last_used_at"
+    t.string "ip_address"
+    t.string "user_agent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_authentication_tokens_on_user_id"
+  end
+
+  create_table "mtg_card_types", id: :serial, force: :cascade do |t|
+    t.integer "mtg_card_id"
+    t.integer "mtg_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mtg_cards", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.string "gatherer_url"
+    t.string "multiverse_id"
+    t.string "gatherer_image_url"
+    t.string "mana_cost"
+    t.string "converted_cost"
+    t.text "oracle_text"
+    t.text "flavor_text"
+    t.string "mark"
+    t.string "power"
+    t.string "toughness"
+    t.string "loyalty"
+    t.string "rarity"
+    t.string "transformed_id"
+    t.string "colors"
+    t.string "artist"
+    t.integer "mtg_set_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mtg_sets", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mtg_types", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "records", force: :cascade do |t|
     t.bigint "user_id"
@@ -21,6 +73,10 @@ ActiveRecord::Schema.define(version: 20170728144320) do
     t.string "s3_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "analysis_data", default: "null"
+    t.datetime "analyzed_at"
+    t.string "plate"
+    t.json "location"
     t.index ["user_id"], name: "index_records_on_user_id"
   end
 
@@ -41,4 +97,5 @@ ActiveRecord::Schema.define(version: 20170728144320) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "authentication_tokens", "users"
 end

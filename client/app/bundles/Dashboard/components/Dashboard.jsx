@@ -24,12 +24,7 @@ export default class Dashboard extends React.Component {
           Welcome to your dashboard!
         </h3>
         <hr />
-        <div className='upload-drop-zone'>
-           Drag and drop OR Click to Upload
-           a Picture of a License Plate
-        </div>
 
-        <input type='file' name='record[s3_url]' id='s3-upload-image-input'/>
       </div>
     );
   }
