@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/kirka121/mtgextractor.git
-  revision: f8561b579d157f7f5105721ef57e7a7af5021441
+  revision: 24d67c696918b3db732ae28238cbbe58eaaa3fd8
   specs:
-    mtgextractor (0.0.1)
+    mtgextractor (0.0.5)
       rest-client
       rspec
 
