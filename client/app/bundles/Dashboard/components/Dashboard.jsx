@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes    from 'prop-types';
+import React        from 'react';
+import CardsList    from './CardsList.jsx';
 
 export default class Dashboard extends React.Component {
   static propTypes = {
-    records: PropTypes.array.isRequired,
+    cards: PropTypes.array.isRequired,
   };
 
   /**
@@ -12,8 +13,9 @@ export default class Dashboard extends React.Component {
    */
   constructor(props, _railsContext) {
     super(props);
+
     this.state = {
-      records: this.props.records
+      cards: this.props.records
     };
   }
 
@@ -25,6 +27,9 @@ export default class Dashboard extends React.Component {
         </h3>
         <hr />
 
+        <input type='text' name='search_query' className='form-control'/>
+
+        <CardsList cards={this.props.cards}/>
       </div>
     );
   }

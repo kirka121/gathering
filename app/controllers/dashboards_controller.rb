@@ -3,10 +3,8 @@ class DashboardsController < ApplicationController
 	#before_action :set_s3_direct_post, only: [:show]
 
 	def show
-		@record = Record.new
-		@records = Record.all
-
-    @react_props = { records: @records }
+		@cards = MtgCard.search({query: {match_all: {}}})
+    @react_props = { cards: @cards }
 	end
 
 	private
