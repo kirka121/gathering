@@ -1,6 +1,7 @@
-import PropTypes    from 'prop-types';
 import React        from 'react';
+import PropTypes    from 'prop-types';
 import CardsList    from './CardsList.jsx';
+import Search  from '../../Search/components/Container.jsx';
 
 export default class Dashboard extends React.Component {
   static propTypes = {
@@ -27,7 +28,7 @@ export default class Dashboard extends React.Component {
         </h3>
         <hr />
 
-        <input type='text' name='search_query' className='form-control'/>
+        <Search/>
 
         <CardsList cards={this.props.cards}/>
       </div>

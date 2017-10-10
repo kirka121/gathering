@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class CardLineItem extends React.Component {
   static propTypes = {
@@ -17,7 +17,8 @@ export default class CardLineItem extends React.Component {
   render() {
     return (
       <div className='card-line-item'>
-        <img className='card-image' src={this.props.card.image_url}/>
+        <img className='card-image' src={this.props.card._source.image_url}/>
+        {/*
         <div className='card-details'>
           <div className='col-xs-4'>
             <div className='card-plate'>
@@ -25,6 +26,7 @@ export default class CardLineItem extends React.Component {
             </div>
           </div>
         </div>
+        */}
       </div>
     );
   }
