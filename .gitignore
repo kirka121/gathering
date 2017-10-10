@@ -27,3 +27,4 @@ node_modules
 
 # Generated js bundles
 /public/webpack/*
+.DS_Store

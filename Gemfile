@@ -13,6 +13,9 @@ gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
 gem 'react_on_rails', '8.0.0'
 gem 'mtgextractor', :git => 'git://github.com/kirka121/mtgextractor.git'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-persistence'
 
 #custom gems
 gem 'gsdk', '>= 1.0.0.4'

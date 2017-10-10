@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+   
+<head> <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title> Down for maintenance! </title>
+    <style>
+        div
+        {
+            margin-left:auto;
+            margin-right:auto;
+            position: relative;
+            top: -7px;
+        }
+        h3
+        {
+            color: #ACACAC;
+            margin-top: -920px;
+            text-align: left;
+            padding-left: 10px;
+          
+            margin-bottom: 5px;
+        }
+        h5
+        {
+            text-align: left;
+            padding-left: 10px;
+            margin-top: 0px;
+            color: white;
+        }
+        #footer
+        {
+            position: relative;
+            top: 630px;
+			font-weight: normal;
+			font-size: 12px;
+			font-family: verdana;
+		}
+        body
+        {
+            text-align: center;
+            color: #DDDDDD;
+            
+        }
+        #rightShadow
+        {
+            position: relative;
+            margin-top: -100px;
+           float: right;
+           left: 30px;
+        }
+       #leftShadow
+       {
+        position: relative;
+        margin-top: -100px;
+        float: left; 
+        left: -30px;
+       }
+        a
+        {
+            color: #DDDDDD;
+        }
+        #top h3, #top h5
+        {
+            margin-left: 30px;
+        }
+        #top
+        {
+          
+        }
+    </style>
+</head>
+ <body background="404_background.jpg" style="background-repeat: repeat-x; background-color: #131313;">
+    <div style="font-size:0px; top: -50px;">
+        
+
+        <img src="404_ContentWell.png">
+            
+        <div id="top" style=" font-family: verdana; width: 1000px;">
+                <img id="rightShadow" src="404_RightShadow.png">
+                <img id="leftShadow" src="404_LeftShadow.png">
+
+                  <h3 style=" font-size: 25px; text-align: center; position: relative; font-weight: normal;">Whoops. You Just Exploded the Internet.</h3>
+                  
+                 <h5 style=" font-size: 12px; text-align: center;">Well, it&#39s not quite that bad. <br /> <br />
+				Wizards.com is down for routine server maintenance. <br />
+				We apologize for the inconvenience and thank you for your patience!
+                 
+      
+        </div> </div>
+    
+        <div id="footer">
+                 <br /> &copy; 1995-2013 Wizards of the Coast LLC, as subsidiary of Hasbro, Inc. All Rights Reserved. <br />
+                 <a href="http://company.wizards.com/tou">Terms of Use</a> |
+                 <a href="http://company.wizards.com/privacy">Privacy Statement</a> </h5> </div>
+        
+       
+   
+</body>
+</html>

@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/kirka121/mtgextractor.git
-  revision: 24d67c696918b3db732ae28238cbbe58eaaa3fd8
+  revision: 6a65e48895cf1e4eb0770290d1e9de08315e46e6
   specs:
-    mtgextractor (0.0.5)
+    mtgextractor (0.0.11)
       rest-client
       rspec
 
@@ -69,6 +69,10 @@ GEM
     aws-sdk-resources (2.10.19)
       aws-sdk-core (= 2.10.19)
     aws-sigv4 (1.0.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
@@ -82,6 +86,8 @@ GEM
       xpath (~> 2.0)
     childprocess (0.6.3)
       ffi (~> 1.0, >= 1.0.11)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -91,20 +97,47 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    elasticsearch (1.0.14)
+      elasticsearch-api (= 1.0.14)
+      elasticsearch-transport (= 1.0.14)
+    elasticsearch-api (1.0.14)
+      multi_json
+    elasticsearch-model (0.1.8)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-persistence (0.1.9)
+      activemodel (> 3)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      elasticsearch-model (>= 0.1)
+      hashie
+      virtus
+    elasticsearch-rails (0.1.8)
+    elasticsearch-transport (1.0.14)
+      faraday
+      multi_json
+    equalizer (0.0.11)
     erubi (1.6.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gsdk (1.0.0.4)
       rails (>= 3.1)
+    hashie (3.4.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
+    ice_nine (0.11.2)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -137,6 +170,7 @@ GEM
       libv8 (~> 5.9)
     minitest (5.10.3)
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.7.1)
@@ -241,6 +275,11 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.0)
@@ -268,6 +307,9 @@ DEPENDENCIES
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
   devise!
+  elasticsearch-model
+  elasticsearch-persistence
+  elasticsearch-rails
   erubis
   gsdk (>= 1.0.0.4)
   jbuilder (~> 2.5)

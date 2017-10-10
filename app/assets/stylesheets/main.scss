@@ -65,12 +65,15 @@ html,body{
   }
 }
 .navbar{
+  padding-top: 0px;
+  margin-bottom: 0px;
   .container{
     max-width: 1000px;
     padding: 0;
   }
 }
 .navbar-nav{
+  margin-top: 5px;
   .active{
     a{
       background-color: transparent !important;
